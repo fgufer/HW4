@@ -109,24 +109,3 @@ using namespace std;
 //    }
 //    cout << endl;
 //}
-////////////////////////////////////////////////////////////////////////////////////////////////////
-#include <iostream>
-using namespace std;
-
-int main() {
-    int size = 0;
-    int* A = nullptr;
-
-    cout << "Input size: ";
-    cin >> size; //size = 3
-
-    A = new int[size] {0}; //0... 0... 0...
-    cout << "Create an array: " << A << endl;
-    printArray(A, size);
-    cout << endl;
-
-    randArray(A, size, -10, 10);
-    printArray(A, size);
-
-    delete[] A;
-}
