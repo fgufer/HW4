@@ -1,6 +1,6 @@
-//#include <iostream>
-//#include <iomanip>
-//using namespace std;
+#include <iostream>
+#include <iomanip>
+using namespace std;
 
 //int main() {
 //    setlocale(0, "");
@@ -109,65 +109,24 @@
 //    }
 //    cout << endl;
 //}
-//
-
-
-//#include <iostream>
-//using namespace std;
-//
-//void mysmpg(float& x, float& y) {
-//    cout << "В середине" << &x << " " << &y << endl;
-//    float buf = x;
-//    x = y;
-//    y = buf;
-//}
-//
-//int main()
-//{
-//    setlocale(0, "");
-//    float a = 0;
-//    float b = 0;
-//    cout << "Введите два числа" << endl;
-//    cin >> a >> b;
-//
-//    cout << "В главной функцие" << &a << " " << &b << endl;
-//    mysmpg(a, b);
-//    cout << a << " " << b << endl;
-//}
-
+////////////////////////////////////////////////////////////////////////////////////////////////////
 #include <iostream>
-#include <cmath>
 using namespace std;
 
-//void RectPS(int x1, int y1, int x2, int y2, int* P, int* S) {
-//    int a = abs(x2 - x1);
-//    int b = abs(y2 - y1);
-//    *P = 2 * (a + b);
-//    *S = a * b;
-//}
-//
-//int main() {
-//    setlocale(0, "");
-//    for (int i = 0; i < 3; i++) {
-//        int x1, x2, y1, y2;
-//        int p = 0, s = 0;
-//        cout << "Введіть координати першої точки: ";
-//        cin >> x1 >> y1;
-//        cout << "Введіть координати другої точки: ";
-//        cin >> x2 >> y2;
-//        RectPS(x1, y1, x2, y2, &p, &s);
-//        cout << "Периметр: " << p << endl;
-//        cout << "Площа: " << s << endl;
-//        cout << "-------------------" << endl;
-//    }
-//}
-
-void Tres(int D, int& K) {
-	K = K * 10 + D;}
 int main() {
-	int uno = 123;
-	int dos = 5;
-	Tres(dos, uno);
-	Tres(1, uno);
-	Tres(9, uno);
-	cout << uno;}
+    int size = 0;
+    int* A = nullptr;
+
+    cout << "Input size: ";
+    cin >> size; //size = 3
+
+    A = new int[size] {0}; //0... 0... 0...
+    cout << "Create an array: " << A << endl;
+    printArray(A, size);
+    cout << endl;
+
+    randArray(A, size, -10, 10);
+    printArray(A, size);
+
+    delete[] A;
+}
